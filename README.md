@@ -52,10 +52,10 @@ npm install && npm run dev
 
 4. Setup environment
 cp .env.example .env
-# Update your DB credentials inside .env:
-# DB_DATABASE=velociti
-# DB_USERNAME=root
-# DB_PASSWORD=
+Update your DB credentials inside .env:
+    DB_DATABASE=velociti
+    DB_USERNAME=root
+    DB_PASSWORD=
 
 5. Run migrations and seed data
 php artisan migrate --seed
