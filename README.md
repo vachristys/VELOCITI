@@ -41,24 +41,24 @@ Laravel Features Used
  Installation Guide
 
 ```bash
-# 1. Clone the repository
+1. Clone the repository
 git clone https://github.com/yourusername/velociti-parking.git
 
-# 2. Install PHP dependencies
+2. Install PHP dependencies
 composer install
 
-# 3. Install front-end dependencies
+3. Install front-end dependencies
 npm install && npm run dev
 
-# 4. Setup environment
+4. Setup environment
 cp .env.example .env
 # Update your DB credentials inside .env:
 # DB_DATABASE=velociti
 # DB_USERNAME=root
 # DB_PASSWORD=
 
-# 5. Run migrations and seed data
+5. Run migrations and seed data
 php artisan migrate --seed
 
-# 6. Start the development server
+6. Start the development server
 php artisan serve
