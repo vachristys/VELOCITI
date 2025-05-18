@@ -1,4 +1,4 @@
-VELOCITI - Smart Parking Management System
+<h1>VELOCITI - Smart Parking Management System</h1>
 
 > A modern digital system to manage parking entries, monitor real-time data, and generate reports for better control and efficiency.
 
