@@ -6,11 +6,10 @@
   <title>Admin Panel - Argon Style</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <!-- Bootstrap CDN -->
+  
+ 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Icon -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
   <style>
@@ -73,7 +72,6 @@
 <body class="text-dark">
 
 <div class="d-flex">
-  <!-- Sidebar -->
   <aside class="bg-white shadow-lg p-4 d-flex flex-column justify-content-between sidebar">
     <div>
       <h1 class="text-purple-700 fw-bold mb-4" style="font-size:2.8rem;">VELOCITI</h1>
@@ -100,7 +98,6 @@
     </form>
   </aside>
 
-  <!-- Main Content -->
   <main class="flex-grow-1">
     <div class="mb-4">
       <img src="{{ asset('assets/img/ad.png') }}" class="banner-img" alt="Banner">
@@ -109,8 +106,14 @@
     @yield('content')
   </main>
 </div>
-
-<!-- Bootstrap Script -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+    offset: 120
+  });
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 <script>
@@ -121,7 +124,7 @@
         document.body.innerHTML = printContents;
         window.print();
         document.body.innerHTML = originalContents;
-        location.reload(); // reload supaya tetap utuh setelah print
+        location.reload();
     }
 </script>
 </html>

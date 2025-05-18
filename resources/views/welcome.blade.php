@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>When to Park</title>
+    <title>VELOCITY</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
@@ -28,13 +28,12 @@
       </a>
     </header>
 
-    <!-- Hero Section -->
     <section class="bg-black text-white text-center py-20 relative">
       <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
         Sistem Manajemen Parkir<br> All in One Touch
       </h1>
 
-      <!-- Car Image -->
+
       <div class="flex justify-center px-4">
         <img
           src="/assets/img/mobil.png"
@@ -43,7 +42,6 @@
         />
       </div>
 
-      <!-- Ikon fitur -->
   <div 
     class="bg-white text-black shadow-lg p-2 rounded-xl w-full max-w-3xl mx-auto absolute -bottom-8 left-1/2 transform -translate-x-1/2 z-10 flex justify-center"
   >
@@ -77,13 +75,11 @@
   </div>
     </section>
 
-    <div class="h-20"></div> <!-- Spacer -->
+    <div class="h-20"></div> 
 
-    <!-- Cara Kerja Sistem -->
 <section class="py-20 px-6 bg-white">
   <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10">
     
-    <!-- Kiri: Teks & Ikon -->
     <div class="flex-1 space-y-6">
       <h2 class="text-3xl font-bold mb-4 text-gray-800" data-aos="fade-right">Cara Kerja</h2>
       <p class="text-gray-600" data-aos="fade-right" data-aos-delay="100">
@@ -91,7 +87,7 @@
       </p>
 
       <div class="grid sm:grid-cols-2 gap-4 mt-4">
-        <!-- Kartu 1 -->
+
         <div class="flex gap-4 items-start p-4 bg-white border rounded-lg shadow transition duration-300 hover:scale-105 hover:border-purple-500" data-aos="fade-up" data-aos-delay="100">
           <div class="text-2xl">📝</div>
           <div>
@@ -100,7 +96,6 @@
           </div>
         </div>
         
-        <!-- Kartu 2 -->
         <div class="flex gap-4 items-start p-4 bg-white border rounded-lg shadow transition duration-300 hover:scale-105 hover:border-purple-500" data-aos="fade-up" data-aos-delay="200">
           <div class="text-2xl">💰</div>
           <div>
@@ -109,7 +104,6 @@
           </div>
         </div>
 
-        <!-- Kartu 3 -->
         <div class="flex gap-4 items-start p-4 bg-white border rounded-lg shadow transition duration-300 hover:scale-105 hover:border-purple-500 col-span-2" data-aos="fade-up" data-aos-delay="300">
           <div class="text-2xl">📊</div>
           <div>
@@ -120,7 +114,6 @@
       </div>
     </div>
 
-    <!-- Kanan: Gambar -->
     <div class="flex-1 text-center" data-aos="zoom-in" data-aos-delay="300">
       <img src="/assets/img/how.png" alt="Ilustrasi Parkir" class="w-full max-w-md mx-auto" />
     </div>
@@ -134,7 +127,6 @@
 
     <div class="grid md:grid-cols-3 gap-8">
       
-      <!-- Fitur A -->
       <div class="bg-gray-900 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 hover:border hover:border-purple-600" data-aos="flip-left" data-aos-delay="100">
         <div class="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 mb-4">
           A
@@ -145,7 +137,6 @@
         </p>
       </div>
 
-      <!-- Fitur B -->
       <div class="bg-gray-900 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 hover:border hover:border-purple-600" data-aos="flip-left" data-aos-delay="200">
         <div class="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 mb-4">
           B
@@ -156,7 +147,6 @@
         </p>
       </div>
 
-      <!-- Fitur G -->
       <div class="bg-gray-900 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 hover:border hover:border-purple-600" data-aos="flip-left" data-aos-delay="300">
         <div class="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 mb-4">
           G
@@ -171,13 +161,9 @@
   </div>
 </section>
 
-
-
-
 <section class="bg-white text-gray-900 py-16 px-4">
   <div class="max-w-6xl mx-auto">
     
-    <!-- Judul -->
     <div class="text-center mb-12 animate__animated animate__fadeInDown">
       <h2 class="text-2xl md:text-3xl font-bold">
         KATA DEVELOPER <span class="text-purple-600 transition">TENTANG VELOCITI</span> KHUSUS 
@@ -188,10 +174,8 @@
       </p>
     </div>
 
-    <!-- Kartu Testimoni -->
 <div class="grid md:grid-cols-3 gap-6">
 
-  <!-- Kartu 1: Developer (Anda) -->
   <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-md hover:shadow-lg transition-transform duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="100">
     <div class="text-indigo-500 text-4xl mb-2">“</div>
     <h4 class="font-bold text-lg mb-2">BANGUN SISTEM YANG BERPIKIR UNTUK KITA.</h4>
@@ -206,7 +190,6 @@
     </div>
   </div>
 
-  <!-- Kartu 2: Master Cheng Yen -->
   <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-md hover:shadow-lg transition-transform duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="200">
     <div class="text-indigo-500 text-4xl mb-2">“</div>
     <h4 class="font-bold text-lg mb-2">KETIKA PIKIRAN TENANG, KEBIJAKSANAAN MUNCUL.</h4>
@@ -221,7 +204,6 @@
     </div>
   </div>
 
-  <!-- Kartu 3: Pebisnis (misal Elon Musk) -->
   <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-md hover:shadow-lg transition-transform duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="300">
     <div class="text-indigo-500 text-4xl mb-2">“</div>
     <h4 class="font-bold text-lg mb-2">SAYA TIDAK MEMBUAT PERUSAHAAN HANYA UNTUK SEKEDARNYA.</h4>
@@ -241,12 +223,8 @@
   </div>
 </section>
 
-
-
-    <!-- Jeda antara testimoni dan footer -->
     <div class="h-10"></div>
 
-    <!-- Bagian Kontak Footer -->
     <footer class="bg-black text-white py-10 px-6">
   <div class="container mx-auto max-w-4xl">
     <div class="flex flex-col md:flex-row justify-between items-center gap-8">
@@ -271,14 +249,13 @@
     </div>
   </div>
 </footer>
-<!-- ...existing code... -->
+
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init({
-    once: true, // animasi hanya sekali saat masuk viewport
-    duration: 800, // durasi animasi
-    offset: 120, // jarak sebelum animasi dimulai
+    once: true, 
+    duration: 800, 
+    offset: 120, 
   });
 </script>
-<!-- ...existing code... -->
   </body>

@@ -8,16 +8,12 @@
 <form method="POST" action="{{ url('/petugas/masuk') }}">
     @csrf
     <div class="row g-4 align-items-center">
-        {{-- Kolom Kiri: Gambar --}}
         <div class="col-md-4 text-center">
             <img src="https://ui-avatars.com/api/?name=Kendaraan&background=6f42c1&color=fff&size=300"
                  alt="Gambar Kendaraan" class="img-fluid rounded" style="max-height: 240px;">
         </div>
 
-        {{-- Kolom Kanan: Form --}}
-<div class="col-md-8 bg-white shadow rounded-4 mx-auto" style="max-width: 600px;" data-aos="fade-up">
-
-
+    <div class="col-md-8 bg-white shadow rounded-4 mx-auto" style="max-width: 600px;" data-aos="fade-up">
             <div class="card shadow-sm p-4 border-0">
                 <div class="mb-3">
                     <label class="form-label fw-semibold">Plat Nomor</label>

@@ -2,27 +2,24 @@
 
 @section('content')
 
-<!-- Judul Halaman -->
-<h4 class="fw-bold mb-4">Dashboard Admin</h4>
+<h4 class="fw-bold mb-4" data-aos="fade-right">Dashboard Admin</h4>
 
-<!-- Filter Transaksi -->
-<div class="mb-4 d-flex gap-2">
-    <a href="{{ route('admin.dashboard', ['filter' => 'harian']) }}" class="btn {{ $filter === 'harian' ? 'btn-primary' : 'btn-outline-primary' }}" style="background:{{ $filter === 'harian' ? '#7c3aed' : 'transparent' }}; color:{{ $filter === 'harian' ? '#fff' : '#7c3aed' }}; border-color:#7c3aed;">
-        Harian
-    </a>
-    <a href="{{ route('admin.dashboard', ['filter' => 'mingguan']) }}" class="btn {{ $filter === 'mingguan' ? 'btn-primary' : 'btn-outline-primary' }}" style="background:{{ $filter === 'mingguan' ? '#7c3aed' : 'transparent' }}; color:{{ $filter === 'mingguan' ? '#fff' : '#7c3aed' }}; border-color:#7c3aed;">
-        Mingguan
-    </a>
-    <a href="{{ route('admin.dashboard', ['filter' => 'bulanan']) }}" class="btn {{ $filter === 'bulanan' ? 'btn-primary' : 'btn-outline-primary' }}" style="background:{{ $filter === 'bulanan' ? '#7c3aed' : 'transparent' }}; color:{{ $filter === 'bulanan' ? '#fff' : '#7c3aed' }}; border-color:#7c3aed;">
-        Bulanan
-    </a>
+<div class="mb-4 d-flex gap-2" data-aos="zoom-in" data-aos-delay="100">
+    @foreach (['harian', 'mingguan', 'bulanan'] as $tipe)
+        <a href="{{ route('admin.dashboard', ['filter' => $tipe]) }}"
+           class="btn {{ $filter === $tipe ? 'btn-primary' : 'btn-outline-primary' }}"
+           style="background:{{ $filter === $tipe ? '#7c3aed' : 'transparent' }};
+                  color:{{ $filter === $tipe ? '#fff' : '#7c3aed' }};
+                  border-color:#7c3aed;">
+            {{ ucfirst($tipe) }}
+        </a>
+    @endforeach
 </div>
 
-<!-- Statistik & Kartu -->
 <div class="row g-4 mb-4">
-    <!-- Kartu Transaksi Hari Ini -->
-    <div class="col-md-6 mb-4 hover:scale-105 transition-transform">
-        <div class="card text-white bg-dark shadow rounded-4 p-4">
+
+    <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card text-white bg-dark shadow rounded-4 p-4 hover:scale-105 transition-transform">
             <div class="card-body">
                 <h5 class="card-title mb-3">Transaksi Hari Ini</h5>
                 <div class="d-flex justify-content-between align-items-center mb-2">
@@ -34,9 +31,8 @@
         </div>
     </div>
 
-    <!-- Kartu Jumlah Petugas -->
-    <div class="col-md-6 mb-4 hover:scale-105 transition-transform">
-        <div class="card bg-white shadow rounded-4 p-4">
+    <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card bg-white shadow rounded-4 p-4 hover:scale-105 transition-transform">
             <div class="card-body">
                 <h5 class="card-title text-dark mb-3">Jumlah Petugas</h5>
                 <div class="d-flex justify-content-between align-items-center mb-2">
@@ -49,41 +45,33 @@
     </div>
 </div>
 
-<!-- Ringkasan Transaksi -->
-<h5 class="fw-bold mb-4">Ringkasan Transaksi {{ ucfirst($filter) }}</h5>
+<h5 class="fw-bold mb-4" data-aos="fade-right">Ringkasan Transaksi {{ ucfirst($filter) }}</h5>
 <div class="row g-4 mb-4">
-    <div class="col-md-4 mb-4 hover:scale-105 transition-transform">
-        <div class="card bg-white p-4 shadow rounded-4">
+    <div class="col-md-4" data-aos="zoom-in-up" data-aos-delay="100">
+        <div class="card bg-white p-4 shadow rounded-4 hover:scale-105 transition-transform">
             <h6 class="text-secondary mb-2">Jumlah Transaksi</h6>
-            <div class="d-flex justify-content-between align-items-center">
-                <h4 class="fw-bold">{{ $data->count() }}</h4>
-            </div>
+            <h4 class="fw-bold">{{ $data->count() }}</h4>
         </div>
     </div>
-    <div class="col-md-4 mb-4 hover:scale-105 transition-transform">
-        <div class="card bg-white p-4 shadow rounded-4">
+    <div class="col-md-4" data-aos="zoom-in-up" data-aos-delay="200">
+        <div class="card bg-white p-4 shadow rounded-4 hover:scale-105 transition-transform">
             <h6 class="text-secondary mb-2">Total Pendapatan</h6>
-            <div class="d-flex justify-content-between align-items-center">
-                <h4 class="fw-bold">Rp {{ number_format($data->sum('biaya')) }}</h4>
-            </div>
+            <h4 class="fw-bold">Rp {{ number_format($data->sum('biaya')) }}</h4>
         </div>
     </div>
-    <div class="col-md-4 mb-4 hover:scale-105 transition-transform">
-        <div class="card bg-white p-4 shadow rounded-4">
+    <div class="col-md-4" data-aos="zoom-in-up" data-aos-delay="300">
+        <div class="card bg-white p-4 shadow rounded-4 hover:scale-105 transition-transform">
             <h6 class="text-secondary mb-2">Rata-rata Biaya</h6>
-            <div class="d-flex justify-content-between align-items-center">
-                <h4 class="fw-bold">Rp {{ number_format($data->avg('biaya')) }}</h4>
-            </div>
+            <h4 class="fw-bold">Rp {{ number_format($data->avg('biaya')) }}</h4>
         </div>
     </div>
 </div>
 
-<!-- Tarif Aktif -->
-<h5 class="fw-bold mb-4">Tarif Parkir Aktif</h5>
+<h5 class="fw-bold mb-4" data-aos="fade-right">Tarif Parkir Aktif</h5>
 <div class="row g-3 mb-4">
     @foreach ($tarif as $t)
-    <div class="col-md-6 mb-3">
-        <div class="card bg-white p-4 shadow rounded-4">
+    <div class="col-md-6" data-aos="flip-left" data-aos-delay="{{ $loop->index * 100 }}">
+        <div class="card bg-white p-4 shadow rounded-4 hover:scale-105 transition-transform">
             <h6 class="text-muted mb-2">{{ ucfirst($t->jenis_kendaraan) }}</h6>
             <div class="d-flex justify-content-between align-items-center">
                 <h4 class="fw-bold">Rp {{ number_format($t->tarif_per_jam) }} / jam</h4>
@@ -94,9 +82,8 @@
     @endforeach
 </div>
 
-<!-- Daftar Petugas -->
-<h5 class="fw-bold mb-4">Daftar Petugas</h5>
-<div class="card shadow rounded-4 p-4 mb-4">
+<h5 class="fw-bold mb-4" data-aos="fade-right">Daftar Petugas</h5>
+<div class="card shadow rounded-4 p-4 mb-4" data-aos="fade-up" data-aos-delay="200">
     <table class="table align-middle">
         <thead class="table-light">
             <tr>

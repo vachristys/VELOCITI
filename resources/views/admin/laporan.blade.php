@@ -3,7 +3,7 @@
 @section('content')
 <h4 class="fw-bold mb-4">Laporan Transaksi Parkir – {{ ucfirst($filter) }}</h4>
 
-{{-- Filter --}}
+
 <div class="mb-4 d-flex gap-2">
     <a href="?filter=harian" class="btn {{ $filter === 'harian' ? 'btn-primary' : 'btn-outline-primary' }}" style="background:{{ $filter === 'harian' ? '#7c3aed' : 'transparent' }}; color:{{ $filter === 'harian' ? '#fff' : '#7c3aed' }}; border-color:#7c3aed;">
         Harian
@@ -16,7 +16,6 @@
     </a>
 </div>
 
-{{-- Card List --}}
 <div class="row row-cols-1 row-cols-md-3 g-4">
     @forelse ($data as $item)
     <div class="col">

@@ -3,7 +3,6 @@
 @section('content')
 <h4 class="fw-bold mb-4">Manajemen Petugas</h4>
 
-{{-- Form --}}
 <div class="card p-4 mb-4 shadow rounded">
     <form method="POST" action="{{ route('admin.user.store') }}">
         @csrf
@@ -24,7 +23,6 @@
     </form>
 </div>
 
-<!-- Daftar Petugas -->
 <h5 class="fw-bold mb-3">Daftar Petugas</h5>
 <div class="card shadow rounded-4 p-3">
     <table class="table align-middle">
@@ -33,6 +31,7 @@
                 <th>Petugas</th>
                 <th>Username</th>
                 <th>Dibuat</th>
+                <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -49,6 +48,15 @@
                 </td>
                 <td>{{ $u->username }}</td>
                 <td>{{ $u->created_at->format('d M Y') }}</td>
+                <td>
+                    <form action="{{ route('admin.user.destroy', $u->id) }}" method="POST" onsubmit="return confirm('Yakin ingin menghapus petugas ini?');" style="display:inline;">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-sm btn-danger" title="Hapus">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </form>
+                </td>
             </tr>
             @endforeach
         </tbody>

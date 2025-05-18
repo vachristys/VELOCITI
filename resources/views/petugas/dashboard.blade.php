@@ -4,7 +4,6 @@
 
 @section('content')
 <div class="row mb-5 mt-3 px-2">
-    {{-- Kamera dan Slot --}}
     <div class="col-lg-7 mb-4">
         <div class="d-flex justify-content-between align-items-center mb-3" data-aos="fade-right">
     <h2 class="fw-bold fs-4 mb-0">Kamera Parkir</h2>
@@ -13,14 +12,12 @@
         <i class="bi bi-question-circle-fill me-1"></i> Pusat Bantuan
     </button>
 </div>
-
-
         <video id="preview" autoplay playsinline 
             class="w-100 rounded shadow mb-4" 
             style="height: 240px; object-fit: cover;" 
             data-aos="zoom-in">
         </video>
-{{-- Modal Bantuan --}}
+
 <div class="modal fade" id="bantuanModal" tabindex="-1" aria-labelledby="bantuanModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content bg-dark text-white rounded-4 animate__animated animate__fadeInUp">
@@ -38,8 +35,6 @@
     </div>
   </div>
 </div>
-
-
 
         <h2 class="fw-bold fs-4 mb-3 p6" data-aos="fade-right" data-aos-delay="100">Status Slot</h2>
         <div class="row g-3">
@@ -64,9 +59,9 @@
         </div>
     </div>
 
-    {{-- Profil, Jam, Cuaca, Kalender --}}
+
 <div class="col-lg-5 mb-4">
-    {{-- Profil --}}
+
     <div class="bg-white text-purple-700 rounded shadow p-3 d-flex align-items-center mb-4" data-aos="fade-left">
         <img src="https://ui-avatars.com/api/?name={{ Auth::user()->username }}" alt="Profil"
              class="rounded-circle me-3" width="60" height="60">
@@ -76,9 +71,8 @@
         </div>
     </div>
 
-    {{-- Baris Jam dan Cuaca --}}
 <div class="row mb-4">
-    {{-- Jam Digital --}}
+
     <div class="col-md-6 mb-3 mb-md-0" data-aos="fade-up" data-aos-delay="100">
         <div class="rounded-xl bg-black text-purple-400 p-4 text-center shadow-lg transition-transform-transform hover:scale-105 duration-300">
             <h6 class="text-xs tracking-widest uppercase mb-1">Jam Sekarang</h6>
@@ -86,7 +80,6 @@
         </div>
     </div>
 
-    {{-- Cuaca --}}
     <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
         <div class="rounded-xl bg-gradient-to-br from-purple-700 via-black to-gray-900 text-white p-4 text-center shadow-lg transition-transform-transform hover:scale-105 duration-300">
             <h6 class="text-xs tracking-widest uppercase mb-1">Cuaca Hari Ini</h6>
@@ -109,9 +102,6 @@
 
 </div>
 
-
-
-{{-- Transaksi Terbaru --}}
 <div class="mt-5 px-2">
     <h2 class="fw-bold fs-4 mb-3" data-aos="fade-up">Transaksi Terbaru</h2>
     <div class="table-responsive shadow-sm rounded bg-white" data-aos="fade-up" data-aos-delay="100">
@@ -149,7 +139,6 @@
     </div>
 </div>
 
-{{-- Kamera Script --}}
 <script>
     navigator.mediaDevices.getUserMedia({ video: true })
         .then(stream => {
